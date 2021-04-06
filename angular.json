@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "DealHUB-UI": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DealHUB-UI"
+    }
+  },
+  "defaultProject": "DealHUB-UI",
+  "cli": {
+    "analytics": "2b3d7b04-3f1c-45a9-b4e0-dda4478025b7"
+  }
 }
