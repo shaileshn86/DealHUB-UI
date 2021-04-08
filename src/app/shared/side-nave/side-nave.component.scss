@@ -1,0 +1,93 @@
+.logo_cont
+{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 24px;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.acc_out_wr{width: 100%;}
+.accordion {
+    width: 96%;
+    
+  }
+  
+  .accordion .menu {
+    position: relative;
+    padding: 10px 15px 10px 45px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .accordion li:last-child .menu {
+    border-bottom: 0;
+  }
+  
+  .accordion li i {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .accordion li i.fa-chevron-down {
+    right: 1rem;
+    left: auto;
+  }
+  
+  .accordion li.active i.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+  
+  .accordion li.active .menu {
+    color: #fff;
+    background-color: #0058bf;
+    border-radius: 7px;
+  }
+  
+  .accordion li.active i {
+    color: #fff;
+  }
+  
+  /* Show submenu */
+
+  
+  .submenu {
+    height: 0;
+    overflow: hidden;
+    background: transparent;
+    font-size: 12px;
+    transition: height 0.4s ease;
+    font-weight: 300;
+  }
+  
+//   .submenu li {
+//     border-bottom: 1px solid #ccc;
+//   }
+  
+  .accordion li:last-child .submenu {
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .accordion li:last-child .submenu li:last-child {
+    border-bottom: 0;
+  }
+  
+  .submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 42px;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .submenu a:hover {
+    background: #b63b4d;
+    color: #fff;
+  }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BackendHeaderComponent } from './backend-header/backend-header.component';
@@ -23,6 +24,7 @@ import { SideNaveComponent } from './side-nave/side-nave.component';
   ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     SharedRoutingModule
   ],
 })

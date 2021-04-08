@@ -6,7 +6,7 @@
 {
     display: inline-block;
     height: 100vh;
-    background-image: url(../../../assets/loginscreen.jpg);
+    background-image: url('../../../assets/loginscreen.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: calc(100% - 480px);
@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color:#2a2d34; /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     
   }
