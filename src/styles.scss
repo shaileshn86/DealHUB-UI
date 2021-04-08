@@ -15,3 +15,14 @@ body {
     // -webkit-font-smoothing: antialiased !important;
     // font-family: "Montserrat", sans-serif !important;
   }
+
+.log_incont
+{
+    display: inline-block;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: calc(100% - 480px);
+    position: relative;
+   overflow: hidden;
+}

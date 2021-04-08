@@ -2,16 +2,7 @@
 {
     display: flex;
 }
-.log_incont
-{
-    display: inline-block;
-    height: 100vh;
-    background-image: url('/assets/loginscreen.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: calc(100% - 480px);
-    position: relative;
-}
+
 #overlay {
     position: absolute; /* Sit on top of the page content */
     width: 100%; /* Full width (cover the whole page) */
@@ -23,6 +14,16 @@
     background-color:#2a2d34; /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     
+  }
+  #overlay::after
+  {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    background-color:rgba(0,0,0,0.3);
+    top: 0;
+    width: 100%;
+    height: 100vh;
   }
 .log_infor_cont
 {
