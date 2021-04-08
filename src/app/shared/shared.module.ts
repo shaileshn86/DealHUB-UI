@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BackendHeaderComponent } from './backend-header/backend-header.component';
 import { BackendFooterComponent } from './backend-footer/backend-footer.component';
+import { SideNaveComponent } from './side-nave/side-nave.component';
 
 
 @NgModule({
@@ -13,12 +14,12 @@ import { BackendFooterComponent } from './backend-footer/backend-footer.componen
     HeaderComponent,
     FooterComponent,
     BackendHeaderComponent, 
-    BackendFooterComponent],
+    BackendFooterComponent, SideNaveComponent],
   exports: [
     HeaderComponent,
     FooterComponent,
     BackendHeaderComponent,
-    BackendFooterComponent
+    BackendFooterComponent,SideNaveComponent
   ],
   imports: [
     CommonModule,
