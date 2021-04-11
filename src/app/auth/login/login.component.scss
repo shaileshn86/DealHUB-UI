@@ -165,10 +165,32 @@
     color: #2b303b;
   }
 
-  .br
-  {
-    @include border-radius(4px);
-  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+    
+}
+
+.example-container
+{
+    
+    ::ng-deep .mat-form-field
+{
+   
+    &.mat-form-field-invalid
+{
+   
+    .mat-form-field-wrapper
+    {
+        .mat-form-field-flex{
+            border: 1px solid red;
+        }
+        
+    }
+    
+}
+
+}
+}
 
 
-  
