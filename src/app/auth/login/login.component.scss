@@ -1,3 +1,5 @@
+@import "../../../assets/scss/mixins";
+
 /*s*/
 /*basic styling */
 .contactForm_pdca {
@@ -162,3 +164,11 @@
     font-size: 16px;
     color: #2b303b;
   }
+
+  .br
+  {
+    @include border-radius(4px);
+  }
+
+
+  
