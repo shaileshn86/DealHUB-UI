@@ -1,22 +1,23 @@
 <div>
-    <p class="to_account">Sign in to your account</p>
-    <form>
+    <p class="to_account">Sign in to your dealHUB account with 
+        the provided credential </p>
+    <form [formGroup]="addShopFormGroup"  onsubmit="onSubmit()">
         <div>
             <div class="mt-cust-fd"  >
-                <mat-form-field  class="mat-form-field"  appearance="fill">
-                  <mat-label>Log In</mat-label>
-                  <input matInput placeholder="User Id"  required>
-                  
-                </mat-form-field>
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <mat-label>Login ID</mat-label>
+                    <input matInput  formControlName="userID" >
+                    <mat-error *ngIf="checkError('userID', 'required')">Login ID is required</mat-error>
+                  </mat-form-field>
               </div>
         </div>
         <div>
             <div class="mt-cust-fd"  >
-                <mat-form-field  class="mat-form-field"  appearance="fill">
-                  <mat-label>Password</mat-label>
-                  <input matInput type="password" placeholder="Password"  required>
-                  
-                </mat-form-field>
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="Password">
+                        <mat-error *ngIf="checkError('Password', 'required')">Password is required</mat-error>
+                  </mat-form-field>
               </div>
         </div>
         <div  style="display: flex;flex-direction: row;flex-wrap: wrap;">
@@ -28,7 +29,7 @@
     
     <mat-checkbox class="example-margin">Remember me</mat-checkbox>
     </div>
-        <div  class="sb_buttion"><button >Sign in</button></div></div>
+        <div  class="sb_buttion"><button [disabled]="addShopFormGroup.invalid">Sign in</button></div></div>
 
         <div class="lost_pass">
            <div> <a href="#">Lost your password?</a></div>
@@ -53,6 +54,7 @@
           </div>
     </form>
 </div> -->
+
 
 
 

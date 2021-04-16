@@ -9,6 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { LoginComponent } from './login/login.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
     AuthRoutingModule

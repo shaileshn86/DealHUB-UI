@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +7,17 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  public addShopFormGroup: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
     // sample comment
+    this.addShopFormGroup = new FormGroup({
+     
+      userID : new FormControl('', [Validators.required]),
+      Password : new FormControl('', [Validators.required])
+
+    });
   }
   email = new FormControl('', [Validators.required, Validators.email]);
 
@@ -21,6 +27,10 @@ export class LoginComponent implements OnInit {
     }
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  public checkError = (controlName: string, errorName: string) => {
+    return this.addShopFormGroup.controls[controlName].hasError(errorName);
   }
   
 }

@@ -1,6 +1,6 @@
 .log_wrp
 {
-    display: flex;
+   position: relative;
 }
 
 #overlay {
@@ -32,8 +32,9 @@
     display: inline-block;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 90px;
+    padding-bottom: 90px;
     box-sizing: border-box;
+    background-color: #f3f4f8;
 }
 .hed_con
 {

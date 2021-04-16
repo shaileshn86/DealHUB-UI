@@ -4,76 +4,78 @@
   height: $size1;
 }
 @mixin padding($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
-  }
-  //Margin mixin
-  @mixin margin($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
-  }
-
-  //alingment mixin
-  
-
-
-  //border mixin
-  @mixin border-all($width, $style, $color) {
-    border-width: $width;
-    border-style: $style;
-    border-color: $color;
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
 }
-  //box-shadow mixin
-  @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
-  
-    -webkit-box-shadow:$top $left $blur $color #{$inset};
-    -moz-box-shadow:$top $left $blur $color #{$inset};
-    box-shadow:$top $left $blur $color #{$inset};
-  }
-  //border-radius mixin
-  @mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-       -moz-border-radius: $radius;
-        -ms-border-radius: $radius;
-            border-radius: $radius;
-  }
-    //box-shadow mixin
-  @mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
-    box-shadow: $x-axis $y-axis $blur $color;
-  }
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
 
-  //flexbox mixin
-  @mixin transform($transforms) {
-    -moz-transform: $transforms;
-      -o-transform: $transforms;
-     -ms-transform: $transforms;
- -webkit-transform: $transforms;
-         transform: $transforms;
+//alingment mixin
+
+//border mixin
+@mixin border-all($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+//box-shadow mixin
+@mixin box-shadow($top, $left, $blur, $color, $inset: "") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+//border-radius mixin
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+//box-shadow mixin
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
+  box-shadow: $x-axis $y-axis $blur $color;
+}
+
+//flexbox mixin
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
 }
 
 //transition
 @mixin transition($transition...) {
-  -moz-transition:    $transition;
-  -o-transition:      $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
   -webkit-transition: $transition;
-  transition:         $transition;
+  transition: $transition;
 }
 
-    //flexbox mixin
-  @mixin flexbox
- {
- display:-webkit-box; // old
- display:-moz-box; // old
- display:-ms-flexbox; // ie
- display:-webkit-flex; // new
- display:flex; // new
- }
+//flexbox mixin
+@mixin flexbox {
+  display: -webkit-box; // old
+  display: -moz-box; // old
+  display: -ms-flexbox; // ie
+  display: -webkit-flex; // new
+  display: flex; // new
+}
 
- @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
   position: $position;
   top: $top;
   right: $right;
@@ -100,41 +102,114 @@
     black: 900,
     ultra: 900,
     ultra-black: 900,
-    extra-ultra: 900
+    extra-ultra: 900,
   );
-  
+
   $output: $weight;
   @if map-has-key($weights, $weight) {
     $output: map-get($weights, $weight);
   }
-  
+
   font-weight: $output;
 }
 
 @mixin font-size($sizeValue: 0.75) {
   font-size: $sizeValue + rem;
 }
-  /*@mixin e*/
+/*@mixin e*/
 
-  
-.mt-cust-fd
-{
-    
-    ::ng-deep .mat-form-field
-{
-   width: 100%;
-    &.mat-form-field-invalid
-{
-   
-    .mat-form-field-wrapper
-    {
-        .mat-form-field-flex{
-            border: 1px solid red;
+.mt-cust-fd {
+  ::ng-deep .mat-form-field {
+    width: 100%;
+
+    &.ng-dirty{
+      &.mat-focused {
+        .mat-form-field-wrapper {
+          .mat-form-field-flex {
+            border: solid 1px #2c62c8;
+            background-color: #f8fbff;
+          }
         }
-        
+      }
+      .mat-form-field-wrapper {
+        .mat-form-field-flex {
+          background-color: #fff;
+          border: solid 1px rgba(0, 0, 0, 0.09);
+          border-radius: 4px;
+        }
+      }
     }
-    
-}
+
+    &.ng-untouched {
+      &.mat-focused {
+        .mat-form-field-wrapper {
+          .mat-form-field-flex {
+            border: solid 1px #2c62c8;
+            background-color: #f8fbff;
+          }
+        }
+      }
+
+      .mat-form-field-wrapper {
+        .mat-form-field-flex {
+          background-color: #fff;
+          border: solid 1px rgba(0, 0, 0, 0.09);
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &.mat-form-field-invalid {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+      &.mat-focused {
+        .mat-form-field-wrapper {
+          .mat-form-field-flex {
+            border: solid 1px red;
+            background-color: #f8fbff;
+          }
+        }
+      }
+
+      .mat-form-field-wrapper {
+        .mat-form-field-flex {
+          background-color: #fff;
+          border: solid 1px red;
+          border-radius: 4px;
+        }
+      }
+    }
+    .mat-form-field-subscript-wrapper
+  {
+    margin-top: -1px;
+    background-color: red;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    .mat-error{
+      color: #fff;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+  }
 
 }
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
