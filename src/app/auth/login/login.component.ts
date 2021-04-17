@@ -7,12 +7,14 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public addShopFormGroup: FormGroup;
+  public loginvalid: FormGroup;
+  log_in:boolean=true;
+  lost_pass:boolean= false;
   constructor() { }
 
   ngOnInit(): void {
     // sample comment
-    this.addShopFormGroup = new FormGroup({
+    this.loginvalid = new FormGroup({
      
       userID : new FormControl('', [Validators.required]),
       Password : new FormControl('', [Validators.required])
@@ -30,8 +32,18 @@ export class LoginComponent implements OnInit {
   }
 
   public checkError = (controlName: string, errorName: string) => {
-    return this.addShopFormGroup.controls[controlName].hasError(errorName);
+    return this.loginvalid.controls[controlName].hasError(errorName);
   }
   
+  lostPass()
+  {
+    this.log_in = false;
+    this.lost_pass = true;
+  }
+  relogin()
+  {
+    this.log_in = true;
+    this.lost_pass = false;
+  }
 }
 
