@@ -1,69 +1,40 @@
 @import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
 
-
-
-  .sb_buttion
-  {
-      text-align: right;
-      width: 50%;
-      display: inline-block;
-  }
-  .sb_buttion  button
-  {
-    border: none;
-    color: white;
-    background-color: #7252d3;
-    font-size: 14px;
-    padding: 12px 25px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  .lost_pass
-  {
-      padding-top: 25px;
-
-  }
-  .lost_pass a , .lost_pass a:focus, .lost_pass a:active
-  {
-      text-decoration: none;
-      color: #4e38b6;
-  }
-  .to_account
-  {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 0.9rem;
-    width: 288px;
-    color: #141414;
-    font-weight: 500;
-  }
-
-
-  ::ng-deep .mat-form-field-underline {
-    display: none;
-    
-}
-
-.example-container
+.to_account
 {
-    
-    ::ng-deep .mat-form-field
-{
-   
-    &.mat-form-field-invalid
-{
-   
-    .mat-form-field-wrapper
+    @include margin(inherit,inherit ,30px ,inherit );
+    @include heightwidth(250px,inherit);
+    @include font-weight(500);
+    &.pass_con
     {
-        .mat-form-field-flex{
-            border: 1px solid red;
-        }
-        
+        @include heightwidth(351px,inherit);
+        @include margin(inherit,inherit ,20px ,inherit );
     }
-    
+}
+.lost_pass
+{
+    cursor: pointer;
+    color: $thm-tex-col-dar;
+    @include margin(20px,auto ,auto ,auto );
+    @include font-weight(500);
+    &.re_login
+    {
+        @include margin(auto,auto ,auto ,inherit );
+    }
+}
+.copy_rgh
+{
+    font-style: italic;
+    cursor: pointer;
+    line-height: initial;
+    color: $thm-tex-col-dar;
+    @include margin(50px,inherit ,inherit ,inherit );
+    @include font-weight(500);
+    @include heightwidth(300px,inherit);
+    @include font-size(0.77);
 }
 
-}
-}
+
 
 
